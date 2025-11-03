@@ -56,7 +56,7 @@ if(WIN32 AND NOT MSVC)
         #add_compile_options(-Wa,-mbig-obj)
 endif()
 
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets LinguistTools REQUIRED)
+find_package(QT NAMES Qt6 COMPONENTS Widgets LinguistTools REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Network Xml Concurrent Widgets UiTools REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS PrintSupport Svg Qml REQUIRED)
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -181,7 +181,7 @@ add_subdirectory(src/latexparser)
 add_subdirectory(src/symbolpanel)
 
 #qtermwidget
-if(${QT_VERSION_MAJOR} LESS_EQUAL 5)
+if(${QT_VERSION_MAJOR} LESS_EQUAL 6)
     find_package(QTermWidget QUIET)
     if(QTermWidget_FOUND)
         message(STATUS "Using QTermWidget5")
