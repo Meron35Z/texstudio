@@ -12,7 +12,7 @@ endif()
 
 
 find_package(PkgConfig)
-pkg_check_modules(QTERMWIDGET_PKG QUIET qtermwidget5)
+pkg_check_modules(QTERMWIDGET_PKG QUIET qtermwidget6)
 
 
 find_path(QTERMWIDGET_INCLUDE_DIR NAMES qtermwidget.h

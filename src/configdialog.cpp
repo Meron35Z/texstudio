@@ -11,7 +11,7 @@
 
 #include "qjsonarray.h"
 #ifdef INTERNAL_TERMINAL
-#include <qtermwidget5/qtermwidget.h>
+#include <qtermwidget6/qtermwidget.h>
 #endif
 
 #include "configdialog.h"
