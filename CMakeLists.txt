@@ -55,7 +55,7 @@ if(WIN32 AND NOT MSVC)
         add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-fpermissive>)
         #add_compile_options(-Wa,-mbig-obj)
 endif()
-
+# Change to ONLY Qt6 here!
 find_package(QT NAMES Qt6 COMPONENTS Widgets LinguistTools REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Network Xml Concurrent Widgets UiTools REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS PrintSupport Svg Qml REQUIRED)
@@ -182,9 +182,9 @@ add_subdirectory(src/symbolpanel)
 
 #qtermwidget
 if(${QT_VERSION_MAJOR} LESS_EQUAL 6)
-    find_package(QTermWidget QUIET)
+    find_package(QTermWidget6 QUIET)
     if(QTermWidget_FOUND)
-        message(STATUS "Using QTermWidget5")
+        message(STATUS "Using QTermWidget6")
         set(ADDITIONAL_DEFINITIONS ${ADDITIONAL_DEFINITIONS} -DINTERNAL_TERMINAL)
     endif()
 endif()
