@@ -24,10 +24,10 @@ find_path(QTERMWIDGET_INCLUDE_DIR NAMES qtermwidget.h
 	HINTS
 		${QTERMWIDGET_PKG_INCLUDE_DIRS}
 	PATH_SUFFIXES
-		qtermwidget5
+		qtermwidget6
 )
 
-find_library(QTERMWIDGET_LIBRARIES NAMES qtermwidget5 ${QTERMWIDGET_PKG_LIBRARIES}
+find_library(QTERMWIDGET_LIBRARIES NAMES qtermwidget6 ${QTERMWIDGET_PKG_LIBRARIES}
 	PATHS
 		/usr/local
 		/usr
