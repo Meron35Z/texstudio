@@ -454,7 +454,7 @@ endif()
 
 #qtermwidget
 if(QTERMWIDGET_FOUND AND ${QT_VERSION_MAJOR} LESS_EQUAL 5 )
-   target_link_libraries(texstudio PUBLIC qtermwidget5)
+   target_link_libraries(texstudio PUBLIC qtermwidget6)
 endif()
 
 #mediaplayer
